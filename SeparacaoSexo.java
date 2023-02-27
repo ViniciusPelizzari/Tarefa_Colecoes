@@ -26,10 +26,12 @@ public class SeparacaoSexo {
         // separando os nomes por sexo e armazenando nos vetores apropriados
         for (int i = 0; i < dados.length; i++) {
             String[] nomeSexo = dados[i].split("-");
-            if (nomeSexo[0].equals("F")) {
+            // ignorando case
+            if (nomeSexo[0].equalsIgnoreCase("F")) {
                 nomesFem[contFem] = nomeSexo[1];
                 contFem++;
-            } else if (nomeSexo[0].equals("M")) {
+                // ignorando case
+            } else if (nomeSexo[0].equalsIgnoreCase("M")) {
                 nomesMasc[contMasc] = nomeSexo[1];
                 contMasc++;
             }
